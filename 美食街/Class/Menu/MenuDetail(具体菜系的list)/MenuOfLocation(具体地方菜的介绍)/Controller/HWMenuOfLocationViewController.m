@@ -34,6 +34,7 @@ static NSString * const ID = @"materialCell";
 @property (weak, nonatomic) IBOutlet UITableViewCell *tabCell;
 @property (weak, nonatomic) IBOutlet HWProcessCell *processCell;
 
+
 /* materialItems */
 @property(strong,nonatomic)NSMutableArray *materialItems;
 
@@ -43,7 +44,8 @@ static NSString * const ID = @"materialCell";
 /**
  processItems模型数组 用于存放烹制步骤数据
  */
-@property (strong, nonatomic) NSMutableArray *processItems;
+@property (strong, nonatomic) NSMutableArray <HWProcessItem *>*processItems;
+
 
 
 @end
@@ -71,24 +73,14 @@ static NSString * const ID = @"materialCell";
 
     //禁止cell被选中
     self.tableView.allowsSelection = NO;
-    
-    
-}
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
     //添加collectionView
     [self setupCollectionView];
     //添加processCell
+    //    if(self.processCell.subviews.count < 3){
     [self setupProcessView];
-   
     
-}
-
-
--(void)viewDidLayoutSubviews{
-
-    NSLog(@"%f------%f",self.tableView.contentSize.height,self.processCellHeight);
+    NSLog(@"processCell.frame = %@---------  %f",NSStringFromCGRect(self.processCell.frame),self.processCellHeight);
 }
 
 -(void)setupCollectionView{
@@ -154,19 +146,33 @@ static NSString * const ID = @"materialCell";
     self.processCell.processArr = _processItems;
     
     //设置processCell的高度,由于固定了每个processView的高度为220
-    self.processCell.HW_Height = count * 220;
+    self.processCell.HW_Height = count * 270;
     self.processCellHeight = self.processCell.HW_Height;
     
+//    UIView *contentView = [[UIView alloc] init];
+//    contentView.frame = CGRectMake(0, 0, HWScreenW, self.processCellHeight);
+//    contentView.backgroundColor = [UIColor yellowColor];
+//    [self.processCell addSubview:contentView];
+    
     for (int i = 0; i < count; i++) {
-        
         HWProcessView *pV = [[NSBundle mainBundle] loadNibNamed:@"HWProcessView" owner:nil options:nil][0];
         
-        //创建对应个数的processView在cell里面
-//        HWProcessView *pView = [[HWProcessView alloc] init];
         
+        //获得有几个模型
+//        NSInteger count = self.processArr.count;
+        CGFloat processViewH = 290;
+        CGFloat processViewY = i * processViewH;
+        pV.frame = CGRectMake(0, processViewY,HWScreenW,processViewH);
         [self.processCell addSubview:pV];
+        
+        pV.pLabel.text = self.processItems[i].pcontent;
+        [pV.pLabel.text stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+        
+        [pV.pImage sd_setImageWithURL:[NSURL URLWithString:self.processItems[i].pic]];
+//        self.pLabel.text = _item.pcontent;
+//        [self.pImage sd_setImageWithURL:[NSURL URLWithString:_item.pic]];
     }
-
+    NSLog(@"ProcessCell.frame = %@",NSStringFromCGRect(self.processCell.frame));
 }
 
 
@@ -218,18 +224,14 @@ static NSString * const ID = @"materialCell";
     }
 }
 
-
-
 -(HWMaterialCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     HWMaterialCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     cell.backgroundColor = self.tabCell.backgroundColor;
     cell.item = _materialItems[indexPath.row];
-    //设置tableView的cell不能被选中
+    //设置tableView的cell不能被选中  self.tableView.allowsSection = NO;
     return cell;
 }
-
-
 
 
 @end

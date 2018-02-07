@@ -7,17 +7,17 @@
 //
 
 #import "HWProcessView.h"
+#import "HWProcessItem.h"
+#import <UIImageView+WebCache.h>
+
+@interface HWProcessView()
+
+
+
+@end
 
 @implementation HWProcessView
 
--(void)layoutSubviews{
-    
-    
-}
 
--(void)awakeFromNib{
-    [super awakeFromNib];
-    
-}
 
 @end

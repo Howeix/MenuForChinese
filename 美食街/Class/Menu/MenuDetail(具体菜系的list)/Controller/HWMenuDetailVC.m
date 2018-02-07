@@ -33,6 +33,8 @@ static NSString * const ID = @"chuancaicell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = [NSString stringWithFormat:@"%@菜谱",self.dataItems.name];
+    
     //注册川菜cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HWMenuDetailCell" bundle:nil] forCellReuseIdentifier:ID];
     
@@ -76,6 +78,8 @@ static NSString * const ID = @"chuancaicell";
     //显示hud
     [SVProgressHUD showWithStatus:@"正在帮你加载菜系,请稍后..."];
 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
         [mgr GET:@"https://way.jd.com/jisuapi/byclass" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -88,7 +92,7 @@ static NSString * const ID = @"chuancaicell";
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [SVProgressHUD dismiss];
         }];
-    
+    });
     
 
 }

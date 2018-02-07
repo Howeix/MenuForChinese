@@ -80,7 +80,7 @@
     [self setValue:tabBar forKey:@"tabBar"];
     [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_image"]];
     
-    NSLog(@"%@",NSStringFromCGRect(self.tabBar.frame));
+    
 }
 
 -(void)setupAllNavController{

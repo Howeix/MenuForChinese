@@ -95,6 +95,7 @@ static NSString * const ID = @"styleOfCookingCell";
 //    self.v = v;
 //    [window addSubview:v];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [mgr GET:@"https://way.jd.com/jisuapi/recipe_class" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -132,6 +133,7 @@ static NSString * const ID = @"styleOfCookingCell";
             [SVProgressHUD dismiss];
             
         }];
+    });
 }
 
 

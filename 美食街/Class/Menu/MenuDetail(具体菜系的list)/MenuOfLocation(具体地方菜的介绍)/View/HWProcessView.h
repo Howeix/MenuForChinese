@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HWProcessItem;
 @interface HWProcessView : UIView
 
+//** processItem */
+@property (strong, nonatomic) HWProcessItem *item;
+@property (weak, nonatomic) IBOutlet UIImageView *pImage;
+@property (weak, nonatomic) IBOutlet UILabel *pLabel;
 @end
