@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f8e;&#x98df;&#x8857;/Class/Menu/MenuDetail(&#x5177;&#x4f53;&#x83dc;&#x7cfb;&#x7684;list)/MenuOfLocation(&#x5177;&#x4f53;&#x5730;&#x65b9;&#x83dc;&#x7684;&#x4ecb;&#x7ecd;)/Controller/HWMenuOfLocationViewController.m"
-            timestampString = "539689431.409806"
+            timestampString = "539691990.169679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>

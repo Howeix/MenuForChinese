@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ngD-xj-7f7" customClass="HWProcessView">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="281"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="ngD-xj-7f7" customClass="HWProcessView">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="290"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelfLabelLabelLabelLabelLabelLabelLabelfLabelLabelLabelLabelLabelLabelLabelf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-An-qcx" userLabel="pcontent">
@@ -21,13 +21,14 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="hgo-cR-9I7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_select" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-go-RUk" userLabel="pic">
-                    <rect key="frame" x="0.0" y="55" width="400" height="226"/>
+                    <rect key="frame" x="0.0" y="55" width="400" height="235"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="400" id="7jS-T8-vA8"/>
+                        <constraint firstAttribute="height" constant="235" id="Uh6-so-iwj"/>
                     </constraints>
                 </imageView>
             </subviews>

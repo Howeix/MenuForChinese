@@ -146,7 +146,7 @@ static NSString * const ID = @"materialCell";
     self.processCell.processArr = _processItems;
     
     //设置processCell的高度,由于固定了每个processView的高度为220
-    self.processCell.HW_Height = count * 270;
+    self.processCell.HW_Height = count * 290;
     self.processCellHeight = self.processCell.HW_Height;
     
 //    UIView *contentView = [[UIView alloc] init];
@@ -165,13 +165,17 @@ static NSString * const ID = @"materialCell";
         pV.frame = CGRectMake(0, processViewY,HWScreenW,processViewH);
         [self.processCell addSubview:pV];
         
+        
+        
         pV.pLabel.text = self.processItems[i].pcontent;
-        [pV.pLabel.text stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+        pV.pLabel.text = [pV.pLabel.text stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
         
         [pV.pImage sd_setImageWithURL:[NSURL URLWithString:self.processItems[i].pic]];
 //        self.pLabel.text = _item.pcontent;
 //        [self.pImage sd_setImageWithURL:[NSURL URLWithString:_item.pic]];
     }
+    
+    
     NSLog(@"ProcessCell.frame = %@",NSStringFromCGRect(self.processCell.frame));
 }
 
