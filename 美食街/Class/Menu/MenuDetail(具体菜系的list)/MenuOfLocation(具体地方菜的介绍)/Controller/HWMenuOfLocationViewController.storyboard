@@ -123,8 +123,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="VV8-1W-I32" userLabel="保留空间">
+                                        <rect key="frame" x="0.0" y="250" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VV8-1W-I32" id="5SH-8r-d2H">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="178" id="5R8-aB-pJT" userLabel="Material">
-                                        <rect key="frame" x="0.0" y="250" width="375" height="178"/>
+                                        <rect key="frame" x="0.0" y="500" width="375" height="178"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5R8-aB-pJT" id="77d-PE-JSb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="177.5"/>
@@ -151,7 +160,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J3A-tv-zNk" customClass="HWProcessCell">
-                                        <rect key="frame" x="0.0" y="428" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="678" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J3A-tv-zNk" id="wQa-JT-nxx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -159,8 +168,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.58639562625066544" green="0.74939552132761711" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="4If-jn-Xdu" userLabel="Process">
-                                        <rect key="frame" x="0.0" y="472" width="375" height="148"/>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="4If-jn-Xdu" userLabel="保留空间">
+                                        <rect key="frame" x="0.0" y="722" width="375" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4If-jn-Xdu" id="38b-st-iFe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="147.5"/>
@@ -177,6 +186,7 @@
                     </tableView>
                     <connections>
                         <outlet property="collectionView" destination="bZc-St-3TB" id="I7o-rY-wGG"/>
+                        <outlet property="digestView" destination="VV8-1W-I32" id="nyX-NO-SaJ"/>
                         <outlet property="iconView" destination="6fR-a7-zRf" id="P1d-8j-nJ3"/>
                         <outlet property="processCell" destination="J3A-tv-zNk" id="9gP-Iy-upq"/>
                         <outlet property="tabCell" destination="5R8-aB-pJT" id="Cng-Yu-IxD"/>

@@ -16,6 +16,7 @@
 #import "HWProcessItem.h"
 #import "HWProcessView.h"
 #import "HWProcessCell.h"
+#import "HWDigestView.h"
 //#import "HWProcessTableView.h"
 
 
@@ -40,6 +41,8 @@ static NSString * const ID = @"materialCell";
 
 //** processCellHeight */
 @property (assign, nonatomic) CGFloat processCellHeight;
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *digestView;
 
 /**
  processItems模型数组 用于存放烹制步骤数据
@@ -73,15 +76,33 @@ static NSString * const ID = @"materialCell";
 
     //禁止cell被选中
     self.tableView.allowsSelection = NO;
-
+    //添加digestView
+    [self setupDigestView];
+    
     //添加collectionView
     [self setupCollectionView];
     //添加processCell
     //    if(self.processCell.subviews.count < 3){
     [self setupProcessView];
     
-    NSLog(@"processCell.frame = %@---------  %f",NSStringFromCGRect(self.processCell.frame),self.processCellHeight);
+//    NSLog(@"processCell.frame = %@---------  %f",NSStringFromCGRect(self.processCell.frame),self.processCellHeight);
+    
+    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
+    
 }
+
+
+-(void)setupDigestView{
+    
+    //创建DigestView
+    HWDigestView *digestV = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HWDigestView class]) owner:nil options:nil][0];
+    
+    digestV.item = _item;
+    [self.digestView addSubview:digestV];
+    
+    
+}
+
 
 -(void)setupCollectionView{
     // 设置collectionView 计算collectionView高度 = rows * itemWH
@@ -217,15 +238,30 @@ static NSString * const ID = @"materialCell";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 1) {
-        return self.tabCell.HW_Height;
-    }else if(indexPath.row == 0){
+
+    if (indexPath.row == 0) {
         return 425;
-    }else if(indexPath.row == 2){
+    }else if (indexPath.row == 1){
+        return 250;
+    }else if (indexPath.row == 2){
+        return self.tabCell.HW_Height;
+    }else if (indexPath.row == 3){
         return self.processCellHeight;
     }else{
-        return 300;
+        return 10;
     }
+    
+    
+    
+    //    if (indexPath.row == 1) {
+//        return self.tabCell.HW_Height;
+//    }else if(indexPath.row == 0){
+//        return 425;
+//    }else if(indexPath.row == 2){
+//        return self.processCellHeight;
+//    }else{
+//        return 10;
+//    }
 }
 
 -(HWMaterialCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

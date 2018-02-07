@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8Iw-7K-fpL" customClass="HWDigestView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-eu-3mJ" userLabel="name">
+                    <rect key="frame" x="0.0" y="30" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="3Gk-SU-tnx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cookingtime" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="728-2V-Sud" userLabel="cookingtime">
+                    <rect key="frame" x="0.0" y="86" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gbN-LD-fsp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8h-nh-Jg7" userLabel="tag">
+                    <rect key="frame" x="0.0" y="198" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="kQK-Ci-TW4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preparetime" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNe-rq-GOH" userLabel="preparetime">
+                    <rect key="frame" x="0.0" y="142" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="nFE-ht-FVq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.021190068493150686" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Hhy-eu-3mJ" firstAttribute="leading" secondItem="VN4-Ey-7Zb" secondAttribute="leading" id="0Yb-QJ-6Sh"/>
+                <constraint firstItem="iNe-rq-GOH" firstAttribute="trailing" secondItem="VN4-Ey-7Zb" secondAttribute="trailing" id="BYo-5V-Out"/>
+                <constraint firstItem="i8h-nh-Jg7" firstAttribute="trailing" secondItem="VN4-Ey-7Zb" secondAttribute="trailing" id="FM1-ZG-ngV"/>
+                <constraint firstItem="Hhy-eu-3mJ" firstAttribute="top" secondItem="VN4-Ey-7Zb" secondAttribute="top" constant="30" id="IoJ-3U-oie"/>
+                <constraint firstItem="iNe-rq-GOH" firstAttribute="top" secondItem="728-2V-Sud" secondAttribute="bottom" constant="35" id="KXy-kn-QnF"/>
+                <constraint firstItem="728-2V-Sud" firstAttribute="top" secondItem="Hhy-eu-3mJ" secondAttribute="bottom" constant="35" id="Mkr-3Z-qYD"/>
+                <constraint firstItem="i8h-nh-Jg7" firstAttribute="top" secondItem="iNe-rq-GOH" secondAttribute="bottom" constant="35" id="UzU-QM-QYE"/>
+                <constraint firstItem="i8h-nh-Jg7" firstAttribute="leading" secondItem="VN4-Ey-7Zb" secondAttribute="leading" id="YqB-uY-hXB"/>
+                <constraint firstItem="Hhy-eu-3mJ" firstAttribute="trailing" secondItem="VN4-Ey-7Zb" secondAttribute="trailing" id="g7E-ie-SfG"/>
+                <constraint firstItem="728-2V-Sud" firstAttribute="trailing" secondItem="VN4-Ey-7Zb" secondAttribute="trailing" id="heD-1K-GMX"/>
+                <constraint firstItem="728-2V-Sud" firstAttribute="leading" secondItem="VN4-Ey-7Zb" secondAttribute="leading" id="rFA-fJ-Ry4"/>
+                <constraint firstItem="iNe-rq-GOH" firstAttribute="leading" secondItem="VN4-Ey-7Zb" secondAttribute="leading" id="xAx-9e-MMc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="VN4-Ey-7Zb"/>
+            <connections>
+                <outlet property="cookingtimeLabel" destination="728-2V-Sud" id="EXJ-yJ-UxW"/>
+                <outlet property="nameLabel" destination="Hhy-eu-3mJ" id="h5s-9R-U0r"/>
+                <outlet property="preparetimeLabel" destination="iNe-rq-GOH" id="Lz9-Td-KTz"/>
+                <outlet property="tagLabel" destination="i8h-nh-Jg7" id="jcW-Qc-I6Z"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="53"/>
+        </view>
+    </objects>
+</document>

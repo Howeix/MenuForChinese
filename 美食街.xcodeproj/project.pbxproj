@@ -11,6 +11,8 @@
 		022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A3202A17B700353AF3 /* HWProcessCell.m */; };
 		022EF3A9202A198100353AF3 /* HWProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A8202A198100353AF3 /* HWProcessView.m */; };
 		022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022EF3AA202A199300353AF3 /* HWProcessView.xib */; };
+		0253462B202B528600B4B5CB /* HWDigestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0253462A202B528600B4B5CB /* HWDigestView.m */; };
+		0253462D202B529000B4B5CB /* HWDigestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0253462C202B529000B4B5CB /* HWDigestView.xib */; };
 		027177312010DFE900C3D25C /* HWMenuStyleOfCookingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0271772F2010DFE900C3D25C /* HWMenuStyleOfCookingCell.m */; };
 		027177322010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027177302010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib */; };
 		027177382010E30400C3D25C /* HWMenuStyleOfCookingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 027177372010E30400C3D25C /* HWMenuStyleOfCookingItem.m */; };
@@ -66,6 +68,9 @@
 		022EF3A7202A198100353AF3 /* HWProcessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWProcessView.h; sourceTree = "<group>"; };
 		022EF3A8202A198100353AF3 /* HWProcessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWProcessView.m; sourceTree = "<group>"; };
 		022EF3AA202A199300353AF3 /* HWProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWProcessView.xib; sourceTree = "<group>"; };
+		02534629202B528600B4B5CB /* HWDigestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDigestView.h; sourceTree = "<group>"; };
+		0253462A202B528600B4B5CB /* HWDigestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWDigestView.m; sourceTree = "<group>"; };
+		0253462C202B529000B4B5CB /* HWDigestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWDigestView.xib; sourceTree = "<group>"; };
 		0271772E2010DFE900C3D25C /* HWMenuStyleOfCookingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWMenuStyleOfCookingCell.h; sourceTree = "<group>"; };
 		0271772F2010DFE900C3D25C /* HWMenuStyleOfCookingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWMenuStyleOfCookingCell.m; sourceTree = "<group>"; };
 		027177302010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWMenuStyleOfCookingCell.xib; sourceTree = "<group>"; };
@@ -235,6 +240,9 @@
 				022EF3A7202A198100353AF3 /* HWProcessView.h */,
 				022EF3A8202A198100353AF3 /* HWProcessView.m */,
 				022EF3AA202A199300353AF3 /* HWProcessView.xib */,
+				02534629202B528600B4B5CB /* HWDigestView.h */,
+				0253462A202B528600B4B5CB /* HWDigestView.m */,
+				0253462C202B529000B4B5CB /* HWDigestView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +613,7 @@
 				0EF3339F2011ADE900823568 /* HWMenuDetailCell.xib in Resources */,
 				022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */,
 				027177322010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib in Resources */,
+				0253462D202B529000B4B5CB /* HWDigestView.xib in Resources */,
 				0E581BC4200F0A6600F3D77E /* LaunchScreen.storyboard in Resources */,
 				022DF0DD201642170053883F /* HWMenuOfLocationViewController.storyboard in Resources */,
 				02A7E7F02017A72C009EE5E1 /* HWMaterialCollectionView.xib in Resources */,
@@ -698,6 +707,7 @@
 				0E581C15200F56B000F3D77E /* HWTabBar.m in Sources */,
 				0E581BFD200F455200F3D77E /* HWNavController.m in Sources */,
 				0E581C12200F499500F3D77E /* HWHomePageViewController.m in Sources */,
+				0253462B202B528600B4B5CB /* HWDigestView.m in Sources */,
 				0E581C1A200F5B4B00F3D77E /* UIImage+Image.m in Sources */,
 				0EA257A82018791A00BD36BA /* UIView+Frame.m in Sources */,
 				0E581BF3200F405200F3D77E /* AppDelegate.m in Sources */,
