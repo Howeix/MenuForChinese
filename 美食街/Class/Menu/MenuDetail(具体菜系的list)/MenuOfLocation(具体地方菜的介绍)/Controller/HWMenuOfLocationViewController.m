@@ -37,7 +37,8 @@ static NSString * const ID = @"materialCell";
 /* materialItems */
 @property(strong,nonatomic)NSMutableArray *materialItems;
 
-
+//** processCellHeight */
+@property (assign, nonatomic) CGFloat processCellHeight;
 
 /**
  processItems模型数组 用于存放烹制步骤数据
@@ -65,7 +66,9 @@ static NSString * const ID = @"materialCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self showData];
+
     //禁止cell被选中
     self.tableView.allowsSelection = NO;
     
@@ -76,12 +79,17 @@ static NSString * const ID = @"materialCell";
     [super viewWillAppear:animated];
     //添加collectionView
     [self setupCollectionView];
-    
-    //添加process tableView
+    //添加processCell
     [self setupProcessView];
+   
     
 }
 
+
+-(void)viewDidLayoutSubviews{
+
+    NSLog(@"%f------%f",self.tableView.contentSize.height,self.processCellHeight);
+}
 
 -(void)setupCollectionView{
     // 设置collectionView 计算collectionView高度 = rows * itemWH
@@ -137,8 +145,6 @@ static NSString * const ID = @"materialCell";
     
 }
 
-
-
 -(void)setupProcessView{
     
     //获取模型的数量然后计算出cell的高度 现在占位视图是一个cell
@@ -147,15 +153,20 @@ static NSString * const ID = @"materialCell";
     //将模型数组给processCell
     self.processCell.processArr = _processItems;
     
+    //设置processCell的高度,由于固定了每个processView的高度为220
+    self.processCell.HW_Height = count * 220;
+    self.processCellHeight = self.processCell.HW_Height;
     
     for (int i = 0; i < count; i++) {
+        
+        HWProcessView *pV = [[NSBundle mainBundle] loadNibNamed:@"HWProcessView" owner:nil options:nil][0];
+        
         //创建对应个数的processView在cell里面
-        HWProcessView *pView = [[HWProcessView alloc] init];
-        [self.processCell addSubview:pView];
+//        HWProcessView *pView = [[HWProcessView alloc] init];
+        
+        [self.processCell addSubview:pV];
     }
-    
-    
-    
+
 }
 
 
@@ -171,6 +182,7 @@ static NSString * const ID = @"materialCell";
     _materialItems = [HWMaterialItem mj_objectArrayWithKeyValuesArray:_item.material];
     
     _processItems = [HWProcessItem mj_objectArrayWithKeyValuesArray:_item.process];
+    
     
 }
 
@@ -199,6 +211,8 @@ static NSString * const ID = @"materialCell";
         return self.tabCell.HW_Height;
     }else if(indexPath.row == 0){
         return 425;
+    }else if(indexPath.row == 2){
+        return self.processCellHeight;
     }else{
         return 300;
     }

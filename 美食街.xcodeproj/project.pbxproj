@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		022DF0DD201642170053883F /* HWMenuOfLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022DF0DC201642170053883F /* HWMenuOfLocationViewController.storyboard */; };
 		022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A3202A17B700353AF3 /* HWProcessCell.m */; };
-		022EF3A6202A17B700353AF3 /* HWProcessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022EF3A4202A17B700353AF3 /* HWProcessCell.xib */; };
 		022EF3A9202A198100353AF3 /* HWProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A8202A198100353AF3 /* HWProcessView.m */; };
 		022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022EF3AA202A199300353AF3 /* HWProcessView.xib */; };
 		027177312010DFE900C3D25C /* HWMenuStyleOfCookingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0271772F2010DFE900C3D25C /* HWMenuStyleOfCookingCell.m */; };
@@ -64,7 +63,6 @@
 		022DF0DC201642170053883F /* HWMenuOfLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HWMenuOfLocationViewController.storyboard; sourceTree = "<group>"; };
 		022EF3A2202A17B700353AF3 /* HWProcessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWProcessCell.h; sourceTree = "<group>"; };
 		022EF3A3202A17B700353AF3 /* HWProcessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWProcessCell.m; sourceTree = "<group>"; };
-		022EF3A4202A17B700353AF3 /* HWProcessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWProcessCell.xib; sourceTree = "<group>"; };
 		022EF3A7202A198100353AF3 /* HWProcessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWProcessView.h; sourceTree = "<group>"; };
 		022EF3A8202A198100353AF3 /* HWProcessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWProcessView.m; sourceTree = "<group>"; };
 		022EF3AA202A199300353AF3 /* HWProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWProcessView.xib; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				02A7E7EC2017A29A009EE5E1 /* HWMaterialCollectionViewCell.xib */,
 				022EF3A2202A17B700353AF3 /* HWProcessCell.h */,
 				022EF3A3202A17B700353AF3 /* HWProcessCell.m */,
-				022EF3A4202A17B700353AF3 /* HWProcessCell.xib */,
 				022EF3A7202A198100353AF3 /* HWProcessView.h */,
 				022EF3A8202A198100353AF3 /* HWProcessView.m */,
 				022EF3AA202A199300353AF3 /* HWProcessView.xib */,
@@ -608,7 +605,6 @@
 				0EF3339F2011ADE900823568 /* HWMenuDetailCell.xib in Resources */,
 				022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */,
 				027177322010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib in Resources */,
-				022EF3A6202A17B700353AF3 /* HWProcessCell.xib in Resources */,
 				0E581BC4200F0A6600F3D77E /* LaunchScreen.storyboard in Resources */,
 				022DF0DD201642170053883F /* HWMenuOfLocationViewController.storyboard in Resources */,
 				02A7E7F02017A72C009EE5E1 /* HWMaterialCollectionView.xib in Resources */,
