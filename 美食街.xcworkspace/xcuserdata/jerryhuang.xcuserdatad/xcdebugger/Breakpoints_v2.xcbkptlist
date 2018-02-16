@@ -2,22 +2,4 @@
 <Bucket
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/Menu/MenuDetail(&#x5177;&#x4f53;&#x83dc;&#x7cfb;&#x7684;list)/MenuOfLocation(&#x5177;&#x4f53;&#x5730;&#x65b9;&#x83dc;&#x7684;&#x4ecb;&#x7ecd;)/View/HWProcessCell.m"
-            timestampString = "540463576.226896"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "HWProcessCell"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

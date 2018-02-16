@@ -168,12 +168,26 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.58639562625066544" green="0.74939552132761711" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="4If-jn-Xdu" userLabel="保留空间">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="4If-jn-Xdu" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="722" width="375" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4If-jn-Xdu" id="38b-st-iFe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="147.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-zA-uzi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qhl-zA-uzi" firstAttribute="top" secondItem="38b-st-iFe" secondAttribute="top" id="ef6-Na-ecH"/>
+                                                <constraint firstItem="Qhl-zA-uzi" firstAttribute="leading" secondItem="38b-st-iFe" secondAttribute="leading" id="fgd-rh-L6a"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qhl-zA-uzi" secondAttribute="bottom" id="hns-ag-hI8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qhl-zA-uzi" secondAttribute="trailing" id="xCr-Of-de7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -186,6 +200,7 @@
                     </tableView>
                     <connections>
                         <outlet property="collectionView" destination="bZc-St-3TB" id="I7o-rY-wGG"/>
+                        <outlet property="contentLabel" destination="Qhl-zA-uzi" id="3Lh-Kp-idW"/>
                         <outlet property="digestView" destination="VV8-1W-I32" id="nyX-NO-SaJ"/>
                         <outlet property="iconView" destination="6fR-a7-zRf" id="P1d-8j-nJ3"/>
                         <outlet property="processCell" destination="J3A-tv-zNk" id="9gP-Iy-upq"/>

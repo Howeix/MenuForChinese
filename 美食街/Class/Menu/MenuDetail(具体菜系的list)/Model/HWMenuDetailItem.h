@@ -31,4 +31,9 @@
 @property(strong, nonatomic)NSArray *process;
 /* tag */
 @property(strong,nonatomic)NSString *tag;
+
+
+/* contentViewHeight */
+@property(assign,nonatomic)CGFloat contentViewHeight;
+
 @end

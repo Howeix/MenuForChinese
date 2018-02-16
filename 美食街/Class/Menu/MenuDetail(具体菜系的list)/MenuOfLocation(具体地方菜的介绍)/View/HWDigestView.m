@@ -33,10 +33,7 @@
     
 }
 
--(void)awakeFromNib{
-    [super awakeFromNib];
-    NSLog(@"HWDigestV.height - %f",self.frame.size.height);
-}
+
 
 
 @end

@@ -33,6 +33,8 @@ static NSString * const ID = @"chuancaicell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     self.title = [NSString stringWithFormat:@"%@菜谱",self.dataItems.name];
     
     //注册川菜cell

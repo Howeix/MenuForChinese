@@ -10,4 +10,15 @@
 
 @implementation HWMenuDetailItem
 
+-(CGFloat)contentViewHeight{
+    
+    CGSize contentSize = CGSizeMake(HWScreenW, MAXFLOAT);
+    
+    return [_content sizeWithFont:[UIFont systemFontOfSize:19] constrainedToSize:contentSize].height + 25;
+}
+
+-(NSString *)content{
+    return [_content stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+}
+
 @end

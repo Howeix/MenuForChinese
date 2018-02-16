@@ -15,30 +15,4 @@
 @implementation HWProcessCell
 
 
-
-//-(void)layoutSubviews{
-//
-//    if (self.processArr.count) return;
-//
-////        pView.backgroundColor = HWRandomColor;
-//    }
-//}
-
-
-
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    
-    
-    
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end

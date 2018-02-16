@@ -49,6 +49,8 @@ static NSString * const ID = @"materialCell";
  */
 @property (strong, nonatomic) NSMutableArray <HWProcessItem *>*processItems;
 
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
 
 
 @end
@@ -85,10 +87,20 @@ static NSString * const ID = @"materialCell";
     //    if(self.processCell.subviews.count < 3){
     [self setupProcessView];
     
+    //添加content
+    [self setupContentView];
+    
 //    NSLog(@"processCell.frame = %@---------  %f",NSStringFromCGRect(self.processCell.frame),self.processCellHeight);
     
 //    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
     
+    
+    
+}
+
+-(void)setupContentView{
+    NSLog(@"%@",self.item.content);
+    self.contentLabel.text = self.item.content;
 }
 
 
@@ -197,7 +209,7 @@ static NSString * const ID = @"materialCell";
     }
     
     
-    NSLog(@"ProcessCell.frame = %@",NSStringFromCGRect(self.processCell.frame));
+//    NSLog(@"ProcessCell.frame = %@",NSStringFromCGRect(self.processCell.frame));
 }
 
 
@@ -248,7 +260,7 @@ static NSString * const ID = @"materialCell";
     }else if (indexPath.row == 3){
         return self.processCellHeight;
     }else{
-        return 10;
+        return _item.contentViewHeight;
     }
     
 }
