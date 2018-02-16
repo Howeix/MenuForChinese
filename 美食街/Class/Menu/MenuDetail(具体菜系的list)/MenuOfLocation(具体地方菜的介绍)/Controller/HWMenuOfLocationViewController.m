@@ -87,7 +87,7 @@ static NSString * const ID = @"materialCell";
     
 //    NSLog(@"processCell.frame = %@---------  %f",NSStringFromCGRect(self.processCell.frame),self.processCellHeight);
     
-    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
+//    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
     
 }
 
@@ -251,17 +251,6 @@ static NSString * const ID = @"materialCell";
         return 10;
     }
     
-    
-    
-    //    if (indexPath.row == 1) {
-//        return self.tabCell.HW_Height;
-//    }else if(indexPath.row == 0){
-//        return 425;
-//    }else if(indexPath.row == 2){
-//        return self.processCellHeight;
-//    }else{
-//        return 10;
-//    }
 }
 
 -(HWMaterialCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

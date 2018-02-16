@@ -24,8 +24,7 @@ static NSString * const ID = @"styleOfCookingCell";
 @property(strong,nonatomic)NSMutableArray *items;
 /* mgr */
 @property(strong,nonatomic)AFHTTPSessionManager *mgr;
-/* v */
-@property(weak,nonatomic)UIView *v;
+
 @end
 
 @implementation HWMenuViewController
@@ -38,16 +37,14 @@ static NSString * const ID = @"styleOfCookingCell";
 //    self.view.backgroundColor = [UIColor grayColor];
     
 //    [self loadData];
-    
     self.title = @"菜谱";
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
     [super viewWillAppear:animated];
+//    if (self.items.count) return;
 
+    if (_items.count) return;
     [self loadData];
     
 }
@@ -60,17 +57,7 @@ static NSString * const ID = @"styleOfCookingCell";
     return _items;
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-//    [SVProgressHUD dismiss];
-//    [_mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
-}
 
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//        [SVProgressHUD showWithStatus:@"正在帮你加载菜系,请稍后..."];
-//        [self loadData];
-//}
 
 -(void)loadData{
     
@@ -95,8 +82,13 @@ static NSString * const ID = @"styleOfCookingCell";
 //    self.v = v;
 //    [window addSubview:v];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    
+    
         [mgr GET:@"https://way.jd.com/jisuapi/recipe_class" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+            //如果数据不能获得到,那么再次发送请求获取数据
+            if (!self.items.count) {
+                [self loadData];
+            }
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
@@ -124,16 +116,19 @@ static NSString * const ID = @"styleOfCookingCell";
             
             [SVProgressHUD dismiss];
             
-            [self.v removeFromSuperview];
+//            [self.v removeFromSuperview];
             
             [self.tableView reloadData];
             
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            if (!self.items.count) {
+                [self loadData];
+            }
             [SVProgressHUD dismiss];
             
         }];
-    });
 }
 
 

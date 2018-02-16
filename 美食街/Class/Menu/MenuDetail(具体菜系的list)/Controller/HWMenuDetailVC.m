@@ -54,11 +54,13 @@ static NSString * const ID = @"chuancaicell";
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    if (!_items) {
+    if (!_items.count) {
         [self loadDataWithClassID:self.dataItems.classid];
     }
     
 }
+
+
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -78,7 +80,6 @@ static NSString * const ID = @"chuancaicell";
     //显示hud
     [SVProgressHUD showWithStatus:@"正在帮你加载菜系,请稍后..."];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [mgr GET:@"https://way.jd.com/jisuapi/byclass" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
@@ -87,12 +88,15 @@ static NSString * const ID = @"chuancaicell";
             //通过指定的classid请求到相对应的菜系菜谱数据(比如:川菜 -> 20个菜谱字典)数组,然后把字典数组转换成模型数组赋值给items数组保存起来
             self.items = [HWMenuDetailItem mj_objectArrayWithKeyValuesArray:responseObject[@"result"][@"result"][@"list"]];
             [self.tableView reloadData];
+            
             [SVProgressHUD dismiss];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (!self.items.count) {
+                [self loadDataWithClassID:classid];
+            }
             [SVProgressHUD dismiss];
         }];
-    });
     
 
 }
