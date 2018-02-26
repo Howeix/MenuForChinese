@@ -29,7 +29,7 @@
     
     //创建一个描述文本属性的字典
     NSMutableDictionary *dictNor = [NSMutableDictionary dictionary];
-    dictNor[NSFontAttributeName] = [UIFont systemFontOfSize:11];
+    dictNor[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     dictNor[NSForegroundColorAttributeName] = [UIColor grayColor];
     [item setTitleTextAttributes:dictNor forState:UIControlStateNormal];
     
@@ -78,8 +78,8 @@
     HWTabBar *tabBar = [[HWTabBar alloc] init];
     
     [self setValue:tabBar forKey:@"tabBar"];
-    [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_image"]];
-    
+//    [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_image"]];
+    tabBar.backgroundColor = [UIColor colorWithRed:210.0 / 255.0 green:117.0 / 255.0 blue:28.0 / 255.0 alpha:1];
     
 }
 

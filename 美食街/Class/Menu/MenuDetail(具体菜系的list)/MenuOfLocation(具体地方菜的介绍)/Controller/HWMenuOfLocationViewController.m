@@ -95,6 +95,12 @@ static NSString * const ID = @"materialCell";
 //    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
     
     
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    rightButton.frame = CGRectMake(0, 0, 40, 40);
+    
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    
+    self.navigationItem.rightBarButtonItem = buttonItem;
     
 }
 

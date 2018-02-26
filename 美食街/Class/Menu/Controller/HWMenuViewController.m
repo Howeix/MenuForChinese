@@ -32,6 +32,8 @@ static NSString * const ID = @"styleOfCookingCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor grayColor];
+    
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HWMenuStyleOfCookingCell" bundle:nil] forCellReuseIdentifier:ID];
 //    self.view.backgroundColor = [UIColor grayColor];

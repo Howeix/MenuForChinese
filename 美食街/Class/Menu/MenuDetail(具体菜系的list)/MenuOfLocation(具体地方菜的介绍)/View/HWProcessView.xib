@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="290"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelfLabelLabelLabelLabelLabelLabelLabelfLabelLabelLabelLabelLabelLabelLabelf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-An-qcx" userLabel="pcontent">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-An-qcx" userLabel="pcontent">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="55"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="hgo-cR-9I7"/>
@@ -24,7 +24,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_select" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-go-RUk" userLabel="pic">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-go-RUk" userLabel="pic">
                     <rect key="frame" x="0.0" y="55" width="400" height="235"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="400" id="7jS-T8-vA8"/>
@@ -51,7 +51,4 @@
             <point key="canvasLocation" x="-233" y="66.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="menu_select" width="23" height="25"/>
-    </resources>
 </document>

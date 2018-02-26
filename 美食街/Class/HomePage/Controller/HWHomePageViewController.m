@@ -21,6 +21,7 @@
     imageV.frame = self.view.frame;
     [self.view addSubview:imageV];
     self.title = @"首页";
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)didReceiveMemoryWarning {
