@@ -52,7 +52,8 @@ static NSString * const ID = @"materialCell";
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
-
+//** favoriteButton */
+@property (weak, nonatomic) UIButton *previousButton;
 
 @end
 
@@ -106,9 +107,24 @@ static NSString * const ID = @"materialCell";
 //    rightButton.imageView.image = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"Favorite"]];
     rightButton.frame = CGRectMake(0, 0, 5, 5);
     [rightButton setImage:[UIImage imageNamed:@"Favorite_Normal"] forState:UIControlStateNormal];
-    [rightButton setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
+    [rightButton setImage:[UIImage imageNamed:@"Favorite_Selected"] forState:UIControlStateSelected];
+    [rightButton addTarget:self action:@selector(clickFavorite:) forControlEvents:UIControlEventTouchUpInside];
+//    [rightButton setHighlighted:NO];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = buttonItem;
+    
+    
+}
+
+-(void)clickFavorite:(UIButton *)favoriteButton{
+    //选中按钮3部曲
+    self.previousButton.selected = NO;
+    
+    favoriteButton.selected = YES;
+    
+    self.previousButton = favoriteButton;
+    
+    
     
 }
 
