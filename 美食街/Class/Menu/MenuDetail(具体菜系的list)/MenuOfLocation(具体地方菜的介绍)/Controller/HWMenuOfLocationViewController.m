@@ -17,6 +17,7 @@
 #import "HWProcessView.h"
 #import "HWProcessCell.h"
 #import "HWDigestView.h"
+#import "UIImage+Image.h"
 //#import "HWProcessTableView.h"
 
 
@@ -94,12 +95,19 @@ static NSString * const ID = @"materialCell";
     
 //    NSLog(@"digestView.height - %f",self.digestView.frame.size.height);
     
+    //添加导航栏右侧按钮
+    [self setupRightBarButtonItem];
     
-    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    rightButton.frame = CGRectMake(0, 0, 40, 40);
     
+}
+
+-(void)setupRightBarButtonItem{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    rightButton.imageView.image = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"Favorite"]];
+    rightButton.frame = CGRectMake(0, 0, 5, 5);
+    [rightButton setImage:[UIImage imageNamed:@"Favorite_Normal"] forState:UIControlStateNormal];
+    [rightButton setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-    
     self.navigationItem.rightBarButtonItem = buttonItem;
     
 }

@@ -70,8 +70,6 @@ static NSString * const ID = @"styleOfCookingCell";
 //    parameters[@"menu"] = @"白菜";
     parameters[@"appkey"] = APPKEY;
     
-    
-
         //显示hud
         [SVProgressHUD showWithStatus:@"正在为您加载菜谱..."];
     
