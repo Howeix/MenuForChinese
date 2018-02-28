@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HWMenuDetailItem : NSObject
+@interface HWMenuDetailItem : NSObject <NSCoding>
 //** classid */
 @property (strong, nonatomic) NSString *classid;
 /* content  label*/

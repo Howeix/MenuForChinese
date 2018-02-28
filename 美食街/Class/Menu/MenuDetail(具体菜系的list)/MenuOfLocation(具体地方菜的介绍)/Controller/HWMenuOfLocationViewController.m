@@ -52,8 +52,7 @@ static NSString * const ID = @"materialCell";
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
-//** favoriteButton */
-@property (weak, nonatomic) UIButton *previousButton;
+
 
 @end
 
@@ -105,26 +104,47 @@ static NSString * const ID = @"materialCell";
 -(void)setupRightBarButtonItem{
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    rightButton.imageView.image = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"Favorite"]];
+    
     rightButton.frame = CGRectMake(0, 0, 5, 5);
     [rightButton setImage:[UIImage imageNamed:@"Favorite_Normal"] forState:UIControlStateNormal];
     [rightButton setImage:[UIImage imageNamed:@"Favorite_Selected"] forState:UIControlStateSelected];
     [rightButton addTarget:self action:@selector(clickFavorite:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButton sizeToFit];
 //    [rightButton setHighlighted:NO];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    
     self.navigationItem.rightBarButtonItem = buttonItem;
-    
-    
 }
 
 -(void)clickFavorite:(UIButton *)favoriteButton{
-    //选中按钮3部曲
-    self.previousButton.selected = NO;
-    
-    favoriteButton.selected = YES;
-    
-    self.previousButton = favoriteButton;
-    
-    
+    favoriteButton.selected = !favoriteButton.selected;
+    if (favoriteButton.selected) {
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"item.txt"];
+        
+//        [NSKeyedArchiver archiveRootObject:_item toFile:path];
+        //新建一块可变数据区
+        NSMutableData *data = [NSMutableData data];
+        //将数据区连接到一个NSKeyedAchiver对象
+        NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+//        [archiver encodeObject:_item forKey:@"item"];
+        [archiver encodeRootObject:_item];
+        [archiver finishEncoding];
+        
+        [data writeToFile:path atomically:YES];
+        
+        
+    }else{
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"item.txt"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        NSKeyedUnarchiver *unachiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        HWMenuDetailItem *item = [unachiver decodeObject];
+        [unachiver finishDecoding];
+        NSLog(@"%@",item.name);
+        
+    }
     
 }
 
