@@ -47,22 +47,32 @@
 //归档的时候调用
 /** 将某个对象写入文件的时候会调用,在这个方法中说明哪些对象的哪些属性需要存储*/
 -(void)encodeWithCoder:(NSCoder *)aCoder{
-//    [aCoder encodeObject:self.name forKey:@"name"];
-//    [aCoder encodeObject:self.content forKey:@"content"];
-//    [aCoder encodeObject:self.cookingtime forKey:@"cookingtime"];
-//    [aCoder encodeObject:self.material forKey:@"material"];
-//    [aCoder encodeObject:self.peoplenum forKey:@"peoplenum"];
-//    [aCoder encodeObject:self.pic forKey:@"pic"];
-//    [aCoder encodeObject:self.preparetime forKey:@"preparetime"];
-//    [aCoder encodeObject:self.process forKey:@"process"];
-//    [aCoder encodeObject:self.tag forKey:@"tag"];
-    [aCoder encodeRootObject:self];
+    [aCoder encodeObject:self.classid forKey:@"classid"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.content forKey:@"content"];
+    [aCoder encodeObject:self.cookingtime forKey:@"cookingtime"];
+    [aCoder encodeObject:self.material forKey:@"material"];
+    [aCoder encodeObject:self.peoplenum forKey:@"peoplenum"];
+    [aCoder encodeObject:self.pic forKey:@"pic"];
+    [aCoder encodeObject:self.preparetime forKey:@"preparetime"];
+    [aCoder encodeObject:self.process forKey:@"process"];
+    [aCoder encodeObject:self.tag forKey:@"tag"];
+    
 }
 /** 解档时候调用,在这个方法中说清楚哪些属性要解档*/
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super init]) {
         //读取文件内容
-        self = [aDecoder decodeObject];
+        self.classid = [aDecoder decodeObjectForKey:@"classid"];
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.content = [aDecoder decodeObjectForKey:@"content"];
+        self.cookingtime = [aDecoder decodeObjectForKey:@"cookingtime"];
+        self.material = [aDecoder decodeObjectForKey:@"material"];
+        self.peoplenum = [aDecoder decodeObjectForKey:@"peoplenum"];
+        self.pic = [aDecoder decodeObjectForKey:@"pic"];
+        self.preparetime = [aDecoder decodeObjectForKey:@"preparetime"];
+        self.process = [aDecoder decodeObjectForKey:@"process"];
+        self.tag = [aDecoder decodeObjectForKey:@"tag"];
     }
     return self;
 }

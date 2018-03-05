@@ -120,7 +120,10 @@ static NSString * const ID = @"materialCell";
     favoriteButton.selected = !favoriteButton.selected;
     if (favoriteButton.selected) {
         NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-        NSString *path = [doc stringByAppendingPathComponent:@"item.txt"];
+        
+        
+        //拼接文件全路径
+        NSString *path = [doc stringByAppendingPathComponent:_item.name];
         
 //        [NSKeyedArchiver archiveRootObject:_item toFile:path];
         //新建一块可变数据区
@@ -128,21 +131,37 @@ static NSString * const ID = @"materialCell";
         //将数据区连接到一个NSKeyedAchiver对象
         NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
 //        [archiver encodeObject:_item forKey:@"item"];
-        [archiver encodeRootObject:_item];
+        [archiver encodeObject:_item forKey:@"item"];
         [archiver finishEncoding];
         
-        [data writeToFile:path atomically:YES];
-        
+        [data writeToFile:[path stringByAppendingPathExtension:@"data"] atomically:YES];
+        NSLog(@"%@",path);
         
     }else{
         NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-        NSString *path = [doc stringByAppendingPathComponent:@"item.txt"];
+        NSString *path = [doc stringByAppendingPathComponent:_item.name];
         NSData *data = [NSData dataWithContentsOfFile:path];
         
         NSKeyedUnarchiver *unachiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-        HWMenuDetailItem *item = [unachiver decodeObject];
+        HWMenuDetailItem *item = [unachiver decodeObjectForKey:@"item"];
+        
+        //创建文件管理对象
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+//        NSDirectoryEnumerator *result = [fileManager enumeratorAtPath:doc];
+        
+        //获得缓存文件加下所有对象存入数组
+        NSArray *arr = [fileManager contentsOfDirectoryAtPath:doc error:nil];
+        
         [unachiver finishDecoding];
-        NSLog(@"%@",item.name);
+
+        //遍历数组
+        for (NSMutableData *data in arr) {
+            if ([data isKindOfClass:[NSMutableData class]]) {
+                NSLog(@"%@",data);
+            }
+        }
+        
+//        NSLog(@"%@",item.name);
         
     }
     
