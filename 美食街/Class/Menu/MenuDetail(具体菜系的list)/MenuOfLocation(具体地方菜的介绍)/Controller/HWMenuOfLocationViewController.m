@@ -52,11 +52,20 @@ static NSString * const ID = @"materialCell";
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
+@property (strong, nonatomic) UIButton *starButton;
 
+@property (strong, nonatomic) NSMutableArray *cachesData;
 
 @end
 
 @implementation HWMenuOfLocationViewController
+
+-(NSMutableArray *)cachesData{
+    if (!_cachesData) {
+        _cachesData = [NSMutableArray array];
+    }
+    return _cachesData;
+}
 
 -(NSMutableArray *)items{
     if (!_materialItems) {
@@ -98,7 +107,34 @@ static NSString * const ID = @"materialCell";
     //添加导航栏右侧按钮
     [self setupRightBarButtonItem];
     
+    //获取并解析 data.plist 并存入全局数组中以供使用
+    [self resolveDataFromCachesDir];
     
+    
+    //判断当前item是否存在于本地数据中
+    [self detectStarOrNot];
+    
+}
+
+
+-(void)resolveDataFromCachesDir{
+    self.cachesData = [[NSMutableArray alloc] initWithContentsOfFile:dataFullPathFromCaches];
+}
+
+-(void)detectStarOrNot{
+    //解析 data.plist 写入数组
+    NSArray *arr = [[NSArray alloc] initWithContentsOfFile:dataFullPathFromCaches];
+    
+    //遍历数组查看数组中是否有当前的item 如果有就点亮星星
+    for (NSDictionary *dict in arr) {
+        if ([dict[@"pic"] isEqualToString:_item.pic]) {
+            //能来到这里说明已经保存过数据 要点亮星星
+            self.starButton.selected = YES;
+            return;
+        }else{
+            self.starButton.selected = NO;
+        }
+    }
 }
 
 -(void)setupRightBarButtonItem{
@@ -113,12 +149,27 @@ static NSString * const ID = @"materialCell";
 //    [rightButton setHighlighted:NO];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     
+    self.starButton = rightButton;
     self.navigationItem.rightBarButtonItem = buttonItem;
 }
+
 
 -(void)clickFavorite:(UIButton *)favoriteButton{
     favoriteButton.selected = !favoriteButton.selected;
     if (favoriteButton.selected) {
+        
+        //判断如果没有就写入并保存到 data.plist 有就返回
+        for (NSDictionary *dict in _cachesData) {
+            if ([dict[@"pic"] isEqualToString:_item.pic]) {
+                return;
+            }
+        }
+        NSDictionary *dict = [NSDictionary dictionary];
+        dict = [_item mj_keyValues];
+        [_cachesData addObject:dict];
+        [_cachesData writeToFile:dataFullPathFromCaches atomically:YES];
+        
+        /*
         NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
         
         
@@ -136,8 +187,23 @@ static NSString * const ID = @"materialCell";
         
         [data writeToFile:[path stringByAppendingPathExtension:@"data"] atomically:YES];
         NSLog(@"%@",path);
+         */
         
     }else{
+        
+        //如果是取消星星的话就从data.plist中删除item
+        for (NSDictionary *dict in _cachesData) {
+            if ([dict[@"pic"] isEqualToString:_item.pic]) {
+                [_cachesData removeObject:dict];
+                [_cachesData writeToFile:dataFullPathFromCaches atomically:YES];
+                return;
+            }
+            
+            
+        }
+        
+        
+        /*
         NSString *doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
         NSString *path = [doc stringByAppendingPathComponent:_item.name];
         NSData *data = [NSData dataWithContentsOfFile:path];
@@ -162,7 +228,7 @@ static NSString * const ID = @"materialCell";
         }
         
 //        NSLog(@"%@",item.name);
-        
+        */
     }
     
 }

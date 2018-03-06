@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HWTabBarController.h"
-
+#import "HWTools.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    HWTools *t = [[HWTools alloc] init];
+    [t informIfTheDataExist];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     

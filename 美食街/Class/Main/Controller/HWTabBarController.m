@@ -7,7 +7,7 @@
 //
 
 #import "HWTabBarController.h"
-#import "HWVideoViewController.h"
+#import "HWFavoriteTableViewController.h"
 #import "HWHomePageViewController.h"
 #import "HWMenuViewController.h"
 #import "HWNavController.h"
@@ -67,7 +67,7 @@
     nav1.tabBarItem.selectedImage = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"menu_select"]];
     
     HWNavController *nav2 = self.childViewControllers[2];
-    nav2.tabBarItem.title = @"视频";
+    nav2.tabBarItem.title = @"收藏";
     nav2.tabBarItem.image = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"video"]];
     nav2.tabBarItem.selectedImage = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"video_select"]];
     
@@ -93,8 +93,8 @@
     HWNavController *nav2 = [[HWNavController alloc] initWithRootViewController:menuVC];
     [self addChildViewController:nav2];
     
-    HWVideoViewController *videoVC = [HWVideoViewController new];
-    HWNavController *nav3 = [[HWNavController alloc] initWithRootViewController:videoVC];
+    HWFavoriteTableViewController *favVc = [HWFavoriteTableViewController new];
+    HWNavController *nav3 = [[HWNavController alloc] initWithRootViewController:favVc];
     [self addChildViewController:nav3];
     
 }
