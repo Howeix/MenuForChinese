@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"2. Sign Up"]];
+    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homePage"]];
     imageV.frame = self.view.frame;
     [self.view addSubview:imageV];
     self.title = @"首页";

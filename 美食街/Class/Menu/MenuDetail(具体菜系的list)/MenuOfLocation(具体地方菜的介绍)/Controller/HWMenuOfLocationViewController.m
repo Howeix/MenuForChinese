@@ -166,7 +166,7 @@ static NSString * const ID = @"materialCell";
         }
         NSDictionary *dict = [NSDictionary dictionary];
         dict = [_item mj_keyValues];
-        [_cachesData addObject:dict];
+        [_cachesData insertObject:dict atIndex:0];
         [_cachesData writeToFile:dataFullPathFromCaches atomically:YES];
         
         /*

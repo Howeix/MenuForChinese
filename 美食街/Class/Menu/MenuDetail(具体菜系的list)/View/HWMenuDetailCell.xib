@@ -57,9 +57,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="iUC-XS-QCk"/>
             <connections>
-                <outlet property="cookingTimeLabel" destination="ADC-ol-I1P" id="w28-Bg-JYn"/>
                 <outlet property="iconView" destination="l4u-3O-UOM" id="prT-gv-ugm"/>
                 <outlet property="nameLabel" destination="IJr-vp-Rxe" id="ezh-N2-RwX"/>
+                <outlet property="tagLabel" destination="ADC-ol-I1P" id="F98-g0-T5t"/>
             </connections>
             <point key="canvasLocation" x="-30" y="36"/>
         </tableViewCell>

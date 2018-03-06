@@ -25,7 +25,7 @@
     
     _item = item;
     self.nameLabel.text = [NSString stringWithFormat:@" 菜名:  %@",item.name];
-    self.cookingTimeLabel.text = [NSString stringWithFormat:@" 简介:   %@",item.tag];
+    self.tagLabel.text = [NSString stringWithFormat:@" 简介:   %@",item.tag];
     
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.pic] placeholderImage:nil];
     
