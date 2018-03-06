@@ -39,35 +39,53 @@
     // 'mj_objectArrayWithFile' 方法可以传入一个 .plist 的全路径,并返回一个模型数组
     self.items = [HWMenuDetailItem mj_objectArrayWithFile:dataFullPathFromCaches];
     
+    //允许在编辑状态下多选
+    self.tableView.allowsSelectionDuringEditing = YES;
     
     UINib *nib = [UINib nibWithNibName:@"HWMenuDetailCell" bundle:nil];
     
     //注册cell
     [self.tableView registerNib:nib forCellReuseIdentifier:@"chuancaicell"];
     
+    //设置导航栏右侧按钮
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(0, 0, 40, 40);
+    button.titleLabel.font = [UIFont systemFontOfSize:16];
+    [button setTitle:@"删除" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
+    [button addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
+    [button sizeToFit];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+    
     
     [self.tableView reloadData];
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    if (!_items.count) {
-        UIView *v = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        
-        UILabel *l = [[UILabel alloc] init];
-        l.HW_Width = 200;
-        l.HW_Height = 200;
-        
-        l.text = @"空空如也~~~";
-        l.center = v.center;
-        [v addSubview:l];
-        [self.tableView addSubview:v];
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+-(void)clickRightButton{
+    //如果是在编辑状态
+    if (self.tableView.isEditing) {
+        [self.tableView beginUpdates];
+        NSArray *selectRows = [self.tableView indexPathsForSelectedRows];
+        NSMutableIndexSet *indexPaths = [[NSMutableIndexSet alloc] init];
+        for (NSIndexPath *path in selectRows) {
+            [indexPaths addIndex:path.row];
+        }
+        [self.items removeObjectsAtIndexes:indexPaths];
+        [self.tableView deleteRowsAtIndexPaths:selectRows withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+        [self.tableView setEditing:NO animated:YES];
+    }else{
+        [self.tableView setEditing:YES animated:YES];
     }
     
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     // 'mj_objectArrayWithFile' 方法可以传入一个 .plist 的全路径,并返回一个模型数组
     self.items = [HWMenuDetailItem mj_objectArrayWithFile:dataFullPathFromCaches];
     [self.tableView reloadData];
@@ -80,7 +98,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 115;
+    return 110;
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -90,15 +108,29 @@
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
-
+#warning TODO: 需要添加多选cell, 然后一起删除的功能
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView setEditing:YES animated:YES];
+    [tableView setEditing:NO animated:YES];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认删除?" preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            
-        }]];
-        [self presentViewController:alertController animated:YES completion:nil];
+        
+        
+        
+        //在这里从 data.plist中删除指定项
+        //如果是取消星星的话就从data.plist中删除item
+        NSMutableArray *arr = [[NSMutableArray alloc] initWithContentsOfFile:dataFullPathFromCaches];
+        HWMenuDetailItem *item = self.items[indexPath.row];
+        for (NSDictionary *dict in arr) {
+            if ([dict[@"pic"] isEqualToString:item.pic]) {
+                [arr removeObject:dict];
+                [self.items removeObjectAtIndex:indexPath.row];
+                [arr writeToFile:dataFullPathFromCaches atomically:YES];
+                [self.tableView beginUpdates];
+                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [self.tableView endUpdates];
+                return;
+            }
+        
+        }
     }
 }
 //修改编辑按钮文字

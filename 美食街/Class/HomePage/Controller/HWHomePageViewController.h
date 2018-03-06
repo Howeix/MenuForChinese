@@ -2,12 +2,12 @@
 //  HWHomePageViewController.h
 //  美食街
 //
-//  Created by 黄炜 on 2018/1/17.
+//  Created by Jerry Huang on 2018/3/7.
 //  Copyright © 2018年 黄炜. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HWHomePageViewController : UITableViewController
+@interface HWHomePageViewController : UIViewController
 
 @end

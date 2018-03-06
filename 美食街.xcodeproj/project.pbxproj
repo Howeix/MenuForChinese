@@ -25,6 +25,7 @@
 		02A7E7ED2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A7E7EB2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m */; };
 		02A7E7EE2017A29A009EE5E1 /* HWMaterialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A7E7EC2017A29A009EE5E1 /* HWMaterialCollectionViewCell.xib */; };
 		02A7E7F02017A72C009EE5E1 /* HWMaterialCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A7E7EF2017A72C009EE5E1 /* HWMaterialCollectionView.xib */; };
+		02C8D8E7204F06CD00E56903 /* HWHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C8D8E6204F06CD00E56903 /* HWHomePageViewController.m */; };
 		0E1BE79A2019CB32004974A4 /* HWProcessItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BE7992019CB32004974A4 /* HWProcessItem.m */; };
 		0E21B38E2015F09100FEA699 /* HWMenuOfLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21B38C2015F09100FEA699 /* HWMenuOfLocationViewController.m */; };
 		0E57A2E6204E686500D68E6C /* HWFavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57A2E5204E686500D68E6C /* HWFavoriteTableViewController.m */; };
@@ -38,7 +39,6 @@
 		0E581BFA200F412B00F3D77E /* HWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581BF9200F412B00F3D77E /* HWTabBarController.m */; };
 		0E581BFD200F455200F3D77E /* HWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581BFC200F455200F3D77E /* HWNavController.m */; };
 		0E581C04200F473500F3D77E /* HWMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581C03200F473500F3D77E /* HWMenuViewController.m */; };
-		0E581C12200F499500F3D77E /* HWHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581C11200F499500F3D77E /* HWHomePageViewController.m */; };
 		0E581C15200F56B000F3D77E /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581C14200F56B000F3D77E /* HWTabBar.m */; };
 		0E581C1A200F5B4B00F3D77E /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581C19200F5B4B00F3D77E /* UIImage+Image.m */; };
 		0E5D6E0520159F2D001918FF /* HWMenuDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D6E0420159F2D001918FF /* HWMenuDetailItem.m */; };
@@ -94,6 +94,8 @@
 		02A7E7EB2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWMaterialCollectionViewCell.m; sourceTree = "<group>"; };
 		02A7E7EC2017A29A009EE5E1 /* HWMaterialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWMaterialCollectionViewCell.xib; sourceTree = "<group>"; };
 		02A7E7EF2017A72C009EE5E1 /* HWMaterialCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWMaterialCollectionView.xib; sourceTree = "<group>"; };
+		02C8D8E5204F06CD00E56903 /* HWHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWHomePageViewController.h; sourceTree = "<group>"; };
+		02C8D8E6204F06CD00E56903 /* HWHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWHomePageViewController.m; sourceTree = "<group>"; };
 		088BAAFAC8DF8FEB6B664F00 /* libPods-美食街.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美食街.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E1BE7982019CB32004974A4 /* HWProcessItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWProcessItem.h; sourceTree = "<group>"; };
 		0E1BE7992019CB32004974A4 /* HWProcessItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWProcessItem.m; sourceTree = "<group>"; };
@@ -122,8 +124,6 @@
 		0E581BFC200F455200F3D77E /* HWNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWNavController.m; sourceTree = "<group>"; };
 		0E581C02200F473500F3D77E /* HWMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWMenuViewController.h; sourceTree = "<group>"; };
 		0E581C03200F473500F3D77E /* HWMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWMenuViewController.m; sourceTree = "<group>"; };
-		0E581C10200F499500F3D77E /* HWHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWHomePageViewController.h; sourceTree = "<group>"; };
-		0E581C11200F499500F3D77E /* HWHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWHomePageViewController.m; sourceTree = "<group>"; };
 		0E581C13200F56B000F3D77E /* HWTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTabBar.h; sourceTree = "<group>"; };
 		0E581C14200F56B000F3D77E /* HWTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTabBar.m; sourceTree = "<group>"; };
 		0E581C18200F5B4B00F3D77E /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
@@ -454,8 +454,8 @@
 		0E581C0D200F494900F3D77E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E581C10200F499500F3D77E /* HWHomePageViewController.h */,
-				0E581C11200F499500F3D77E /* HWHomePageViewController.m */,
+				02C8D8E5204F06CD00E56903 /* HWHomePageViewController.h */,
+				02C8D8E6204F06CD00E56903 /* HWHomePageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -720,7 +720,6 @@
 				02A7E7ED2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m in Sources */,
 				0E581C15200F56B000F3D77E /* HWTabBar.m in Sources */,
 				0E581BFD200F455200F3D77E /* HWNavController.m in Sources */,
-				0E581C12200F499500F3D77E /* HWHomePageViewController.m in Sources */,
 				0253462B202B528600B4B5CB /* HWDigestView.m in Sources */,
 				0E581C1A200F5B4B00F3D77E /* UIImage+Image.m in Sources */,
 				0EA257A82018791A00BD36BA /* UIView+Frame.m in Sources */,
@@ -728,6 +727,7 @@
 				0E581C04200F473500F3D77E /* HWMenuViewController.m in Sources */,
 				0E57A2E6204E686500D68E6C /* HWFavoriteTableViewController.m in Sources */,
 				0271775320111C3500C3D25C /* HWMenuDetailCell.m in Sources */,
+				02C8D8E7204F06CD00E56903 /* HWHomePageViewController.m in Sources */,
 				022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */,
 				0E1BE79A2019CB32004974A4 /* HWProcessItem.m in Sources */,
 				0E581BC7200F0A6600F3D77E /* main.m in Sources */,
