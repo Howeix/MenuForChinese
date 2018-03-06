@@ -40,6 +40,7 @@ static NSString * const ID = @"chuancaicell";
     //注册川菜cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HWMenuDetailCell" bundle:nil] forCellReuseIdentifier:ID];
     
+    
 //    [self loadData];
     
     

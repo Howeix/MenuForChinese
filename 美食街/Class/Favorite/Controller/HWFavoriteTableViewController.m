@@ -52,6 +52,22 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if (!_items.count) {
+        UIView *v = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        
+        UILabel *l = [[UILabel alloc] init];
+        l.HW_Width = 200;
+        l.HW_Height = 200;
+        
+        l.text = @"空空如也~~~";
+        l.center = v.center;
+        [v addSubview:l];
+        [self.tableView addSubview:v];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+    
+    
     // 'mj_objectArrayWithFile' 方法可以传入一个 .plist 的全路径,并返回一个模型数组
     self.items = [HWMenuDetailItem mj_objectArrayWithFile:dataFullPathFromCaches];
     [self.tableView reloadData];
@@ -122,7 +138,7 @@
     //从这里把数据传进去
     
     locationMenuVC.item = self.items[indexPath.row];
-    
+    locationMenuVC.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:locationMenuVC animated:YES];
     

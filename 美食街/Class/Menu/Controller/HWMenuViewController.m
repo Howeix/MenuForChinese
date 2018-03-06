@@ -32,12 +32,19 @@ static NSString * const ID = @"styleOfCookingCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor grayColor];
+//    self.tableView.backgroundColor = [UIColor grayColor];
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HWMenuStyleOfCookingCell" bundle:nil] forCellReuseIdentifier:ID];
-//    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    
+//    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homePage"]];
+//    imageV.frame = self.view.frame;
+    
+//    self.tableView.backgroundView = imageV;
 //    [self loadData];
     self.title = @"菜谱";
 }
@@ -45,7 +52,8 @@ static NSString * const ID = @"styleOfCookingCell";
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 //    if (self.items.count) return;
-
+    
+    //如果数组里存在内容就返回不用每次显示菜谱view就loadData
     if (_items.count) return;
     [self loadData];
     
