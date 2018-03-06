@@ -10,6 +10,8 @@
 #import <MJExtension.h>
 #import "HWMenuDetailItem.h"
 #import "HWMenuDetailCell.h"
+
+
 @interface HWFavoriteTableViewController ()
 @property (strong, nonatomic) NSMutableArray *items;
 
@@ -36,8 +38,10 @@
     // 'mj_objectArrayWithFile' 方法可以传入一个 .plist 的全路径,并返回一个模型数组
     self.items = [HWMenuDetailItem mj_objectArrayWithFile:dataFullPathFromCaches];
     
+    UINib *nib = [UINib nibWithNibName:@"HWMenuDetailCell" bundle:nil];
+    
     //注册cell
-    [self.tableView registerClass:[HWMenuDetailCell class] forCellReuseIdentifier:@"chuancaicell"];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"chuancaicell"];
     
     
     [self.tableView reloadData];
@@ -46,20 +50,36 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
+    return self.items.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    return 150;
 }
+
+/*
+ @property (weak, nonatomic) IBOutlet UIImageView *iconView;
+ @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+ @property (weak, nonatomic) IBOutlet UILabel *cookingTimeLabel;
+ 
+ */
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HWMenuDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chuancaicell"];
+    HWMenuDetailItem *item = self.items[indexPath.row];
     
+    NSLog(@"%zd --- %p",indexPath.row,cell);
+    cell.nameLabel.text = item.name;
+    cell.cookingTimeLabel.text = item.cookingtime;
+    cell.iconView.image = [UIImage imageNamed:item.pic];
     
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
 
 
 @end

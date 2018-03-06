@@ -13,5 +13,7 @@
 @interface HWMenuDetailCell : UITableViewCell
 /* item */
 @property(strong,nonatomic)HWMenuDetailItem *item;
-
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cookingTimeLabel;
 @end
