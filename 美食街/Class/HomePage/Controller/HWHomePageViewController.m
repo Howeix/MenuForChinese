@@ -8,6 +8,7 @@
 
 #import "HWHomePageViewController.h"
 #import "HWMenuDetailItem.h"
+#import "HWCategoryViewController.h"
 #import <MJExtension.h>
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
@@ -36,48 +37,79 @@
     //发送请求 获取数据
     [self loadData];
     
-    //在scrollview中添加button 11个
-    [self setupCategoryButton];
+    
     
 }
 
 -(void)setupCategoryButton{
-    CGFloat buttonCenterX = self.view.center.x;
+    CGFloat buttonX = 0;
     CGFloat buttonW = HWScreenW;
     CGFloat buttonH = self.scrollView.contentSize.height / self.items.count;
     int i = 0;
-    for (NSDictionary *dict in self.items) {
+    for (NSDictionary *dict in _items) {
         CGFloat buttonY = buttonH * i;
         //创建button
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(buttonCenterX, buttonY, buttonW, buttonH);
-        button.backgroundColor = HWRandomColor;
+        button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
+        button.backgroundColor = [HWRandomColor colorWithAlphaComponent:0.3];
+        [button setTitle:dict[@"name"] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        button.titleLabel.font = [UIFont systemFontOfSize:30];
+        [button addTarget:self action:@selector(clickCategoryBtn:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.scrollView addSubview:button];
         i++;
     }
+}
+
+//点击分类按钮进入
+-(void)clickCategoryBtn:(UIButton *)btn{
+    NSLog(@"%@",btn.titleLabel.text);
+    //按照具体点击的分类去获取数据
+    //遍历数组 取出和按钮分类一致的选项
+    for (NSDictionary *dict in _items) {
+        if ([dict[@"name"] isEqualToString:btn.titleLabel.text]) {
+            //能来到这里说明已经检索到正确的分类:
+            NSLog(@"%@",dict[@"list"]);
+            //
+            HWCategoryViewController *ctgVC = [[HWCategoryViewController alloc] init];
+            ctgVC.view.backgroundColor = [UIColor yellowColor];
+            ctgVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ctgVC animated:YES];
+            
+            return;
+        }
+    }
+    
+    
+    
 }
 
 -(void)loadData{
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     
     NSDictionary *parameters = @{
-//                                 @"classid" : classid,
+//                                 @"classid" : @"2",
 //                                 @"start" : @"0",
-//                                 @"num" : @"20",
+//                                 @"num" : @"10",
                                  @"appkey" : APPKEY
                                  };
     //显示hud
 //    [SVProgressHUD showWithStatus:@"正在帮你加载菜系,请稍后..."];
-    
+
     
     [mgr GET:@"https://way.jd.com/jisuapi/recipe_class" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSLog(@"%@",responseObject);
-        [responseObject writeToFile:@"/Users/jerryhuang/Desktop/home.plist" atomically:YES];
-        //字典数组
+        [responseObject writeToFile:@"/Users/huangwei/Desktop/homeGongXiao.plist" atomically:YES];
+        //字典数组 (11个字典)
         self.items = responseObject[@"result"][@"result"];
+        
+        //在scrollview中添加button 11个
+        [self setupCategoryButton];
         
         
         //通过指定的classid请求到相对应的菜系菜谱数据(比如:川菜 -> 20个菜谱字典)数组,然后把字典数组转换成模型数组赋值给items数组保存起来

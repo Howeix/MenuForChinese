@@ -43,6 +43,10 @@
 		0E581C1A200F5B4B00F3D77E /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E581C19200F5B4B00F3D77E /* UIImage+Image.m */; };
 		0E5D6E0520159F2D001918FF /* HWMenuDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D6E0420159F2D001918FF /* HWMenuDetailItem.m */; };
 		0EA257A82018791A00BD36BA /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA257A72018791A00BD36BA /* UIView+Frame.m */; };
+		0EE5A5A2204FD5CF00689ECA /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5A1204FD5CF00689ECA /* View.xib */; };
+		0EE5A5AE204FDBCB00689ECA /* HWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */; };
+		0EE5A5AF204FDBCB00689ECA /* HWCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AD204FDBCB00689ECA /* HWCategoryViewController.xib */; };
+		0EE5A5B2204FDDD400689ECA /* HWCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A5B1204FDDD400689ECA /* HWCategoryItem.m */; };
 		0EF3339F2011ADE900823568 /* HWMenuDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF3339E2011ADE900823568 /* HWMenuDetailCell.xib */; };
 		8CC935B26A78692F2DB1F563 /* libPods-美食街.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 088BAAFAC8DF8FEB6B664F00 /* libPods-美食街.a */; };
 /* End PBXBuildFile section */
@@ -132,6 +136,12 @@
 		0E5D6E0420159F2D001918FF /* HWMenuDetailItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWMenuDetailItem.m; sourceTree = "<group>"; };
 		0EA257A62018791A00BD36BA /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		0EA257A72018791A00BD36BA /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		0EE5A5A1204FD5CF00689ECA /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		0EE5A5AB204FDBCB00689ECA /* HWCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCategoryViewController.h; sourceTree = "<group>"; };
+		0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCategoryViewController.m; sourceTree = "<group>"; };
+		0EE5A5AD204FDBCB00689ECA /* HWCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWCategoryViewController.xib; sourceTree = "<group>"; };
+		0EE5A5B0204FDDD400689ECA /* HWCategoryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCategoryItem.h; sourceTree = "<group>"; };
+		0EE5A5B1204FDDD400689ECA /* HWCategoryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCategoryItem.m; sourceTree = "<group>"; };
 		0EF3339E2011ADE900823568 /* HWMenuDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWMenuDetailCell.xib; sourceTree = "<group>"; };
 		5AEF170BD5C5923B1252DD1E /* Pods-美食街.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美食街.debug.xcconfig"; path = "Pods/Target Support Files/Pods-美食街/Pods-美食街.debug.xcconfig"; sourceTree = "<group>"; };
 		6DBB0E461C6C798FF501ED34 /* Pods-美食街.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美食街.release.xcconfig"; path = "Pods/Target Support Files/Pods-美食街/Pods-美食街.release.xcconfig"; sourceTree = "<group>"; };
@@ -456,6 +466,8 @@
 			children = (
 				02C8D8E5204F06CD00E56903 /* HWHomePageViewController.h */,
 				02C8D8E6204F06CD00E56903 /* HWHomePageViewController.m */,
+				0EE5A5A1204FD5CF00689ECA /* View.xib */,
+				0EE5A5A7204FDB6E00689ECA /* MenuCategory */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,6 +504,42 @@
 				0E57A2E8204E68F900D68E6C /* HWTools.m */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		0EE5A5A7204FDB6E00689ECA /* MenuCategory */ = {
+			isa = PBXGroup;
+			children = (
+				0EE5A5A8204FDB6E00689ECA /* Controller */,
+				0EE5A5A9204FDB6E00689ECA /* Model */,
+				0EE5A5AA204FDB6E00689ECA /* View */,
+			);
+			path = MenuCategory;
+			sourceTree = "<group>";
+		};
+		0EE5A5A8204FDB6E00689ECA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EE5A5AB204FDBCB00689ECA /* HWCategoryViewController.h */,
+				0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */,
+				0EE5A5AD204FDBCB00689ECA /* HWCategoryViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0EE5A5A9204FDB6E00689ECA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EE5A5B0204FDDD400689ECA /* HWCategoryItem.h */,
+				0EE5A5B1204FDDD400689ECA /* HWCategoryItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EE5A5AA204FDB6E00689ECA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A8B937EDB2772BE815CC7EE1 /* Pods */ = {
@@ -629,6 +677,8 @@
 				0253462D202B529000B4B5CB /* HWDigestView.xib in Resources */,
 				0E581BC4200F0A6600F3D77E /* LaunchScreen.storyboard in Resources */,
 				022DF0DD201642170053883F /* HWMenuOfLocationViewController.storyboard in Resources */,
+				0EE5A5AF204FDBCB00689ECA /* HWCategoryViewController.xib in Resources */,
+				0EE5A5A2204FD5CF00689ECA /* View.xib in Resources */,
 				02A7E7F02017A72C009EE5E1 /* HWMaterialCollectionView.xib in Resources */,
 				02A7E7EE2017A29A009EE5E1 /* HWMaterialCollectionViewCell.xib in Resources */,
 				0E581BC1200F0A6600F3D77E /* Assets.xcassets in Resources */,
@@ -714,12 +764,14 @@
 				0E21B38E2015F09100FEA699 /* HWMenuOfLocationViewController.m in Sources */,
 				0271774C20111B2F00C3D25C /* HWMenuDetailVC.m in Sources */,
 				0E57A2E9204E68F900D68E6C /* HWTools.m in Sources */,
+				0EE5A5AE204FDBCB00689ECA /* HWCategoryViewController.m in Sources */,
 				027177382010E30400C3D25C /* HWMenuStyleOfCookingItem.m in Sources */,
 				0E5D6E0520159F2D001918FF /* HWMenuDetailItem.m in Sources */,
 				022EF3A9202A198100353AF3 /* HWProcessView.m in Sources */,
 				02A7E7ED2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m in Sources */,
 				0E581C15200F56B000F3D77E /* HWTabBar.m in Sources */,
 				0E581BFD200F455200F3D77E /* HWNavController.m in Sources */,
+				0EE5A5B2204FDDD400689ECA /* HWCategoryItem.m in Sources */,
 				0253462B202B528600B4B5CB /* HWDigestView.m in Sources */,
 				0E581C1A200F5B4B00F3D77E /* UIImage+Image.m in Sources */,
 				0EA257A82018791A00BD36BA /* UIView+Frame.m in Sources */,
