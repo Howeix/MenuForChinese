@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/HWHomePageViewController.m"
-            timestampString = "542053299.486387"
+            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
+            timestampString = "542132490.8539701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-loadData"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-configCollectionView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,91 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/HWHomePageViewController.m"
-            timestampString = "542053299.486775"
+            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
+            timestampString = "542132490.854448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-loadData"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-configCollectionView"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HWHomePageViewController loadData]"
-                  moduleName = "&#x7f8e;&#x98df;&#x8857;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerryhuang/Documents/MenuForChinese/%E7%BE%8E%E9%A3%9F%E8%A1%97/Class/HomePage/Controller/HWHomePageViewController.m"
-                  timestampString = "542053299.5779409"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "313">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[HWHomePageViewController loadData]_block_invoke_2"
-                  moduleName = "&#x7f8e;&#x98df;&#x8857;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerryhuang/Documents/MenuForChinese/%E7%BE%8E%E9%A3%9F%E8%A1%97/Class/HomePage/Controller/HWHomePageViewController.m"
-                  timestampString = "542053299.581574"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "&#x7f8e;&#x98df;&#x8857;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerryhuang/Documents/MenuForChinese/%E7%BE%8E%E9%A3%9F%E8%A1%97/Class/HomePage/Controller/HWHomePageViewController.m"
-                  timestampString = "542053299.584901"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "&#x7f8e;&#x98df;&#x8857;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerryhuang/Documents/MenuForChinese/%E7%BE%8E%E9%A3%9F%E8%A1%97/Class/HomePage/Controller/HWHomePageViewController.m"
-                  timestampString = "542053299.587744"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[HWHomePageViewController loadData]_block_invoke.67"
-                  moduleName = "&#x7f8e;&#x98df;&#x8857;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerryhuang/Documents/MenuForChinese/%E7%BE%8E%E9%A3%9F%E8%A1%97/Class/HomePage/Controller/HWHomePageViewController.m"
-                  timestampString = "542053299.5910521"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

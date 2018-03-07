@@ -74,8 +74,10 @@
             NSLog(@"%@",dict[@"list"]);
             //
             HWCategoryViewController *ctgVC = [[HWCategoryViewController alloc] init];
-            ctgVC.view.backgroundColor = [UIColor yellowColor];
+            //传递字典
+            ctgVC.dataDict = dict;
             ctgVC.hidesBottomBarWhenPushed = YES;
+            
             [self.navigationController pushViewController:ctgVC animated:YES];
             
             return;
@@ -104,7 +106,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSLog(@"%@",responseObject);
-        [responseObject writeToFile:@"/Users/huangwei/Desktop/homeGongXiao.plist" atomically:YES];
+        [responseObject writeToFile:@"/Users/jerryhuang/Desktop/homeGongXiao.plist" atomically:YES];
         //字典数组 (11个字典)
         self.items = responseObject[@"result"][@"result"];
         

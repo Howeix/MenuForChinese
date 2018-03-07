@@ -275,7 +275,7 @@ static NSString * const ID = @"materialCell";
     由于在"小码哥"的项目中是tableview的footview,让collectionView占据footview, 所以只需要设置高度就行
     HWMaterialCollectionView *cv = [[HWMaterialCollectionView alloc] initWithFrame:CGRectMake(0, 0, HWScreenW, cellH) collectionViewLayout:layout];
 
-    //设置cell的高度
+    //设置collectionView的高度
     self.tabCell.HW_Height = cellH;
     
     //这里同时也要给cell的高度进行修改

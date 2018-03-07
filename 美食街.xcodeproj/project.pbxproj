@@ -11,6 +11,8 @@
 		022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A3202A17B700353AF3 /* HWProcessCell.m */; };
 		022EF3A9202A198100353AF3 /* HWProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 022EF3A8202A198100353AF3 /* HWProcessView.m */; };
 		022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022EF3AA202A199300353AF3 /* HWProcessView.xib */; };
+		0241C0E020503B7C00C5AC96 /* HWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0241C0DE20503B7C00C5AC96 /* HWCategoryCell.m */; };
+		0241C0E120503B7C00C5AC96 /* HWCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0241C0DF20503B7C00C5AC96 /* HWCategoryCell.xib */; };
 		0253462B202B528600B4B5CB /* HWDigestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0253462A202B528600B4B5CB /* HWDigestView.m */; };
 		0253462D202B529000B4B5CB /* HWDigestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0253462C202B529000B4B5CB /* HWDigestView.xib */; };
 		02602C19203706A9002D1FCA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02602C18203706A9002D1FCA /* libz.tbd */; };
@@ -75,6 +77,9 @@
 		022EF3A7202A198100353AF3 /* HWProcessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWProcessView.h; sourceTree = "<group>"; };
 		022EF3A8202A198100353AF3 /* HWProcessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWProcessView.m; sourceTree = "<group>"; };
 		022EF3AA202A199300353AF3 /* HWProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWProcessView.xib; sourceTree = "<group>"; };
+		0241C0DD20503B7C00C5AC96 /* HWCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HWCategoryCell.h; path = ../../../../../../../HWCategoryCell.h; sourceTree = "<group>"; };
+		0241C0DE20503B7C00C5AC96 /* HWCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HWCategoryCell.m; path = ../../../../../../../HWCategoryCell.m; sourceTree = "<group>"; };
+		0241C0DF20503B7C00C5AC96 /* HWCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HWCategoryCell.xib; path = ../../../../../../../HWCategoryCell.xib; sourceTree = "<group>"; };
 		02534629202B528600B4B5CB /* HWDigestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDigestView.h; sourceTree = "<group>"; };
 		0253462A202B528600B4B5CB /* HWDigestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWDigestView.m; sourceTree = "<group>"; };
 		0253462C202B529000B4B5CB /* HWDigestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWDigestView.xib; sourceTree = "<group>"; };
@@ -175,6 +180,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0241C0DC20503B3E00C5AC96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0241C0DD20503B7C00C5AC96 /* HWCategoryCell.h */,
+				0241C0DE20503B7C00C5AC96 /* HWCategoryCell.m */,
+				0241C0DF20503B7C00C5AC96 /* HWCategoryCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0271774320111AC100C3D25C /* MenuDetail(具体菜系的list) */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,7 +526,7 @@
 			children = (
 				0EE5A5A8204FDB6E00689ECA /* Controller */,
 				0EE5A5A9204FDB6E00689ECA /* Model */,
-				0EE5A5AA204FDB6E00689ECA /* View */,
+				0241C0DC20503B3E00C5AC96 /* View */,
 			);
 			path = MenuCategory;
 			sourceTree = "<group>";
@@ -533,13 +548,6 @@
 				0EE5A5B1204FDDD400689ECA /* HWCategoryItem.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0EE5A5AA204FDB6E00689ECA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A8B937EDB2772BE815CC7EE1 /* Pods */ = {
@@ -671,6 +679,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0241C0E120503B7C00C5AC96 /* HWCategoryCell.xib in Resources */,
 				0EF3339F2011ADE900823568 /* HWMenuDetailCell.xib in Resources */,
 				022EF3AB202A199300353AF3 /* HWProcessView.xib in Resources */,
 				027177322010DFE900C3D25C /* HWMenuStyleOfCookingCell.xib in Resources */,
@@ -780,6 +789,7 @@
 				0E57A2E6204E686500D68E6C /* HWFavoriteTableViewController.m in Sources */,
 				0271775320111C3500C3D25C /* HWMenuDetailCell.m in Sources */,
 				02C8D8E7204F06CD00E56903 /* HWHomePageViewController.m in Sources */,
+				0241C0E020503B7C00C5AC96 /* HWCategoryCell.m in Sources */,
 				022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */,
 				0E1BE79A2019CB32004974A4 /* HWProcessItem.m in Sources */,
 				0E581BC7200F0A6600F3D77E /* main.m in Sources */,

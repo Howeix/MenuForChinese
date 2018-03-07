@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HWCategoryCell.h"
 
 @interface HWCategoryViewController : UIViewController
-
+@property(strong,nonatomic)NSDictionary *dataDict;
 @end
