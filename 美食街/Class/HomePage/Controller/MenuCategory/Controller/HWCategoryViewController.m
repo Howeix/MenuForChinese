@@ -7,7 +7,8 @@
 //
 
 #import "HWCategoryViewController.h"
-#import "HWDetailMenuCategoryTableViewController.h"
+//#import "HWDetailMenuCategoryTableViewController.h"
+#import "HWDetailMenuCategoryViewController.h"
 #import "HWMenuDetailItem.h"
 #import <MJExtension.h>
 
@@ -115,7 +116,7 @@ static NSString * const ID = @"HWCategoryCell";
 //     [HWMenuDetailItem mj_objectArrayWithKeyValuesArray:dict];
     
     //创建HWMenuViewController
-    HWDetailMenuCategoryTableViewController *vc = [[HWDetailMenuCategoryTableViewController alloc] init];
+    HWDetailMenuCategoryViewController *vc = [[HWDetailMenuCategoryViewController alloc] init];
 //
 //    //只需将字典中的classid传递给vc, 让vc去根据classid发送请求
     vc.classid = dict[@"classid"];

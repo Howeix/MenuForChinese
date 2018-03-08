@@ -19,29 +19,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
-            timestampString = "542190641.705138"
+            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/DetailMenuCategory/Controller/HWDetailMenuCategoryTableViewController.m"
+            timestampString = "542195668.313224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/DetailMenuCategory/Controller/HWDetailMenuCategoryTableViewController.m"
-            timestampString = "542190641.705556"
+            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/DetailMenuCategory/Controller/HWDetailMenuCategoryViewController.m"
+            timestampString = "542195668.313597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-loadData"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-loadDataWithClassID:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

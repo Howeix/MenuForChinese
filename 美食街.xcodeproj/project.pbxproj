@@ -46,6 +46,7 @@
 		0EE2BB592050D61C00F7D2B0 /* HWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BB572050D61C00F7D2B0 /* HWCategoryCell.m */; };
 		0EE2BB5A2050D61C00F7D2B0 /* HWCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE2BB582050D61C00F7D2B0 /* HWCategoryCell.xib */; };
 		0EE2BB72205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */; };
+		0EE2BB752051322500F7D2B0 /* HWDetailMenuCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BB742051322500F7D2B0 /* HWDetailMenuCategoryViewController.m */; };
 		0EE5A5A2204FD5CF00689ECA /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5A1204FD5CF00689ECA /* View.xib */; };
 		0EE5A5AE204FDBCB00689ECA /* HWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */; };
 		0EE5A5AF204FDBCB00689ECA /* HWCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AD204FDBCB00689ECA /* HWCategoryViewController.xib */; };
@@ -144,6 +145,8 @@
 		0EE2BB582050D61C00F7D2B0 /* HWCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWCategoryCell.xib; sourceTree = "<group>"; };
 		0EE2BB70205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDetailMenuCategoryTableViewController.h; sourceTree = "<group>"; };
 		0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWDetailMenuCategoryTableViewController.m; sourceTree = "<group>"; };
+		0EE2BB732051322500F7D2B0 /* HWDetailMenuCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDetailMenuCategoryViewController.h; sourceTree = "<group>"; };
+		0EE2BB742051322500F7D2B0 /* HWDetailMenuCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWDetailMenuCategoryViewController.m; sourceTree = "<group>"; };
 		0EE5A5A1204FD5CF00689ECA /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		0EE5A5AB204FDBCB00689ECA /* HWCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCategoryViewController.h; sourceTree = "<group>"; };
 		0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCategoryViewController.m; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 			children = (
 				0EE2BB70205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.h */,
 				0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */,
+				0EE2BB732051322500F7D2B0 /* HWDetailMenuCategoryViewController.h */,
+				0EE2BB742051322500F7D2B0 /* HWDetailMenuCategoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 				02C8D8E7204F06CD00E56903 /* HWHomePageViewController.m in Sources */,
 				0EE2BB592050D61C00F7D2B0 /* HWCategoryCell.m in Sources */,
 				022EF3A5202A17B700353AF3 /* HWProcessCell.m in Sources */,
+				0EE2BB752051322500F7D2B0 /* HWDetailMenuCategoryViewController.m in Sources */,
 				0E1BE79A2019CB32004974A4 /* HWProcessItem.m in Sources */,
 				0E581BC7200F0A6600F3D77E /* main.m in Sources */,
 				0E581BFA200F412B00F3D77E /* HWTabBarController.m in Sources */,
