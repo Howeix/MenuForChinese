@@ -7,6 +7,9 @@
 //
 
 #import "HWCategoryViewController.h"
+//#import "HWDetailMenuCategoryViewController.h"
+#import "HWMenuDetailItem.h"
+#import <MJExtension.h>
 
 @interface HWCategoryViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
@@ -103,9 +106,23 @@ static NSString * const ID = @"HWCategoryCell";
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.items.count;
-    
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    //获取指定的字典
+    NSDictionary *dict = _items[indexPath.row];
+    //字典转模型
+//     [HWMenuDetailItem mj_objectArrayWithKeyValuesArray:dict];
+    
+    //创建HWMenuViewController
+//    HWDetailMenuCategoryViewController *vc = [[HWDetailMenuCategoryViewController alloc] init];
+//
+//    //只需将字典中的classid传递给vc, 让vc去根据classid发送请求
+//    vc.classid = dict[@"classid"];
+//    vc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HWCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];

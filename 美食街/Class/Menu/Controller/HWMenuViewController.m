@@ -51,13 +51,15 @@ static NSString * const ID = @"styleOfCookingCell";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    if (self.items.count) return;
     
     //如果数组里存在内容就返回不用每次显示菜谱view就loadData
     if (_items.count) return;
     [self loadData];
     
+    
 }
+
+
 
 
 -(NSMutableArray *)dataArr{

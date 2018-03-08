@@ -11,4 +11,6 @@
 @interface HWMenuViewController : UITableViewController
 //** 菜系name */
 @property (strong, nonatomic) NSString *name;
+
+@property (strong, nonatomic) NSString *classid;
 @end

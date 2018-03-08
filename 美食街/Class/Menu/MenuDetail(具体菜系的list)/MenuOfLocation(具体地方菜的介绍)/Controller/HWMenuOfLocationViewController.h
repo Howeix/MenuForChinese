@@ -11,4 +11,5 @@
 @interface HWMenuOfLocationViewController : UITableViewController
 /* item */
 @property(strong,nonatomic)HWMenuDetailItem *item;
+
 @end

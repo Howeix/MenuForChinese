@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
-            timestampString = "542132490.8539701"
+            timestampString = "542134222.488088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-configCollectionView"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
-            timestampString = "542132490.854448"
+            timestampString = "542134222.4885679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-configCollectionView"
             landmarkType = "7">
          </BreakpointContent>
