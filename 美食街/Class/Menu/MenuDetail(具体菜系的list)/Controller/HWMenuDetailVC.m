@@ -22,30 +22,19 @@ static NSString * const ID = @"chuancaicell";
 /* 数据 */
 @property(strong,nonatomic)NSArray *items;
 
-
 @end
 
 @implementation HWMenuDetailVC
 
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     self.title = [NSString stringWithFormat:@"%@菜谱",self.dataItems.name];
-    
     //注册川菜cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HWMenuDetailCell" bundle:nil] forCellReuseIdentifier:ID];
-    
-    
 //    [self loadData];
-    
-    
 }
-
 
 -(NSArray *)items{
     if (!_items) {
@@ -62,8 +51,6 @@ static NSString * const ID = @"chuancaicell";
     }
     
 }
-
-
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -100,8 +87,6 @@ static NSString * const ID = @"chuancaicell";
             }
             [SVProgressHUD dismiss];
         }];
-    
-
 }
 
 //当点击Menu控制器的具体一个cell后,给MenuDetail控制器的模型赋值,然后来到这里
@@ -110,11 +95,9 @@ static NSString * const ID = @"chuancaicell";
 }
 
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
 }
-
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 130;
@@ -130,7 +113,6 @@ static NSString * const ID = @"chuancaicell";
     return cell;
 }
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -141,9 +123,7 @@ static NSString * const ID = @"chuancaicell";
     
     locationMenuVC.item = self.items[indexPath.row];
     
-    
     [self.navigationController pushViewController:locationMenuVC animated:YES];
-    
 }
 
 
