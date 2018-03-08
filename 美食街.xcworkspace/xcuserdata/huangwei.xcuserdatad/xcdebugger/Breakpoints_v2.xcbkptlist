@@ -20,12 +20,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/HWCategoryViewController.m"
-            timestampString = "542188317.829661"
+            timestampString = "542190641.705138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x7f8e;&#x98df;&#x8857;/Class/HomePage/Controller/MenuCategory/Controller/DetailMenuCategory/Controller/HWDetailMenuCategoryTableViewController.m"
+            timestampString = "542190641.705556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

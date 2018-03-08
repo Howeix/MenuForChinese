@@ -45,6 +45,7 @@
 		0EA257A82018791A00BD36BA /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA257A72018791A00BD36BA /* UIView+Frame.m */; };
 		0EE2BB592050D61C00F7D2B0 /* HWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BB572050D61C00F7D2B0 /* HWCategoryCell.m */; };
 		0EE2BB5A2050D61C00F7D2B0 /* HWCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE2BB582050D61C00F7D2B0 /* HWCategoryCell.xib */; };
+		0EE2BB72205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */; };
 		0EE5A5A2204FD5CF00689ECA /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5A1204FD5CF00689ECA /* View.xib */; };
 		0EE5A5AE204FDBCB00689ECA /* HWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */; };
 		0EE5A5AF204FDBCB00689ECA /* HWCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A5AD204FDBCB00689ECA /* HWCategoryViewController.xib */; };
@@ -141,6 +142,8 @@
 		0EE2BB562050D61C00F7D2B0 /* HWCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCategoryCell.h; sourceTree = "<group>"; };
 		0EE2BB572050D61C00F7D2B0 /* HWCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCategoryCell.m; sourceTree = "<group>"; };
 		0EE2BB582050D61C00F7D2B0 /* HWCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWCategoryCell.xib; sourceTree = "<group>"; };
+		0EE2BB70205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDetailMenuCategoryTableViewController.h; sourceTree = "<group>"; };
+		0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWDetailMenuCategoryTableViewController.m; sourceTree = "<group>"; };
 		0EE5A5A1204FD5CF00689ECA /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		0EE5A5AB204FDBCB00689ECA /* HWCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCategoryViewController.h; sourceTree = "<group>"; };
 		0EE5A5AC204FDBCB00689ECA /* HWCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCategoryViewController.m; sourceTree = "<group>"; };
@@ -534,6 +537,8 @@
 		0EE2BB5C2050ED6400F7D2B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0EE2BB70205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.h */,
+				0EE2BB71205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				027177382010E30400C3D25C /* HWMenuStyleOfCookingItem.m in Sources */,
 				0E5D6E0520159F2D001918FF /* HWMenuDetailItem.m in Sources */,
 				022EF3A9202A198100353AF3 /* HWProcessView.m in Sources */,
+				0EE2BB72205123BB00F7D2B0 /* HWDetailMenuCategoryTableViewController.m in Sources */,
 				02A7E7ED2017A29A009EE5E1 /* HWMaterialCollectionViewCell.m in Sources */,
 				0E581C15200F56B000F3D77E /* HWTabBar.m in Sources */,
 				0E581BFD200F455200F3D77E /* HWNavController.m in Sources */,
