@@ -71,8 +71,7 @@
     for (NSDictionary *dict in _items) {
         if ([dict[@"name"] isEqualToString:btn.titleLabel.text]) {
             //能来到这里说明已经检索到正确的分类:
-            NSLog(@"%@",dict[@"list"]);
-            //
+            
             HWCategoryViewController *ctgVC = [[HWCategoryViewController alloc] init];
             //传递字典
             ctgVC.dataDict = dict;
@@ -105,14 +104,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"%@",responseObject);
-        [responseObject writeToFile:@"/Users/jerryhuang/Desktop/homeGongXiao.plist" atomically:YES];
         //字典数组 (11个字典)
         self.items = responseObject[@"result"][@"result"];
         
         //在scrollview中添加button 11个
         [self setupCategoryButton];
-        
         
         //通过指定的classid请求到相对应的菜系菜谱数据(比如:川菜 -> 20个菜谱字典)数组,然后把字典数组转换成模型数组赋值给items数组保存起来
 //        self.items = [HWMenuDetailItem mj_objectArrayWithKeyValuesArray:responseObject[@"result"][@"result"][@"list"]];

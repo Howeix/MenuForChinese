@@ -46,7 +46,7 @@ static NSString * const ID = @"styleOfCookingCell";
     
 //    self.tableView.backgroundView = imageV;
 //    [self loadData];
-    self.title = @"菜谱";
+    self.title = @"地方菜谱";
 }
 
 -(void)viewWillAppear:(BOOL)animated{

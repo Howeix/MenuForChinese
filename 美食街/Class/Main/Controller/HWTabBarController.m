@@ -62,7 +62,7 @@
     
     
     HWNavController *nav1 = self.childViewControllers[1];
-    nav1.tabBarItem.title = @"菜谱";
+    nav1.tabBarItem.title = @"地方菜谱";
     nav1.tabBarItem.image = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"menu"]];
     nav1.tabBarItem.selectedImage = [UIImage imageWithOriginalImage:[UIImage imageNamed:@"menu_select"]];
     
